@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Analia 🍓</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8e7;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7043, #ffb300);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background: #4caf50;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #fff59d;
+        }
+
+        .bienvenida {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .bienvenida h2 {
+            color: #e65100;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .frutas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .fruta {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+
+        .fruta:hover {
+            transform: translateY(-8px);
+        }
+
+        .emoji {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .fruta h3 {
+            color: #388e3c;
+            margin-bottom: 10px;
+            font-size: 23px;
+        }
+
+        .precio {
+            color: #e65100;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        button {
+            background: #ff7043;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+
+        .oferta {
+            background: #fff176;
+            margin: 30px auto;
+            padding: 25px;
+            text-align: center;
+            max-width: 700px;
+            border-radius: 20px;
+        }
+
+        .oferta h2 {
+            color: #d84315;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍎 Mercado de Analia 🍓</h1>
+        <p>Frutas frescas, saludables y deliciosas</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#frutas">Frutas</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section class="bienvenida" id="inicio">
+        <h2>¡Bienvenidos al mercado de Analia! 💚</h2>
+        <p>Encuentra las frutas más frescas para cuidar tu salud.</p>
+    </section>
+
+    <section class="frutas" id="frutas">
+
+        <div class="fruta">
+            <div class="emoji">🍎</div>
+            <h3>Manzanas</h3>
+            <p>Rojas, dulces y crujientes.</p>
+            <div class="precio">$1.50</div>
+            <button onclick="comprar('Manzanas')">Comprar</button>
+        </div>
+
+        <div class="fruta">
+            <div class="emoji">🍌</div>
+            <h3>Bananas</h3>
+            <p>Deliciosas y llenas de energía.</p>
+            <div class="precio">$1.00</div>
+            <button onclick="comprar('Bananas')">Comprar</button>
+        </div>
+
+        <div class="fruta">
+            <div class="emoji">🍓</div>
+            <h3>Fresas</h3>
+            <p>Frescas, dulces y jugosas.</p>
+            <div class="precio">$2.00</div>
+            <button onclick="comprar('Fresas')">Comprar</button>
+        </div>
+
+        <div class="fruta">
+            <div class="emoji">🍊</div>
+            <h3>Naranjas</h3>
+            <p>Ricas en vitamina C.</p>
+            <div class="precio">$1.25</div>
+            <button onclick="comprar('Naranjas')">Comprar</button>
+        </div>
+
+        <div class="fruta">
+            <div class="emoji">🍉</div>
+            <h3>Sandía</h3>
+            <p>Refrescante y perfecta para el verano.</p>
+            <div class="precio">$3.00</div>
+            <button onclick="comprar('Sandía')">Comprar</button>
+        </div>
+
+        <div class="fruta">
+            <div class="emoji">🥭</div>
+            <h3>Mangos</h3>
+            <p>Dulces y tropicales.</p>
+            <div class="precio">$1.75</div>
+            <button onclick="comprar('Mangos')">Comprar</button>
+        </div>
+
+    </section>
+
+    <section class="oferta" id="ofertas">
+        <h2>🍍 ¡Oferta especial! 🍍</h2>
+        <p>Compra 3 frutas diferentes y recibe un <strong>10% de descuento</strong>.</p>
+    </section>
+
+    <footer id="contacto">
+        <h3>Mercado de Analia 💚</h3>
+        <p>Gracias por visitar nuestro mercado.</p>
+        <p>📧 contacto@mercadodeanalia.com</p>
+        <p>© 2026 Mercado de Analia</p>
+    </footer>
+
+    <script>
+        function comprar(fruta) {
+            alert("¡Gracias por comprar " + fruta + " en el Mercado de Analia! 🍎");
+        }
+    </script>
+
+</body>
+</html>
